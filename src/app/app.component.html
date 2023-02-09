@@ -1,0 +1,49 @@
+<!-- main app container -->
+<div>
+    <div class="m-3">
+        <h1>Bootstrap 5 Modal Example with Angular 15</h1>
+        <p>{{bodyText}}</p>
+        <button class="btn btn-primary me-2" (click)="modalService.open('modal-1')">Open Modal 1</button>
+        <button class="btn btn-primary" (click)="modalService.open('modal-2')">Open Modal 2</button>
+    </div>
+    
+    <modal id="modal-1">
+        <div class="modal-header">
+            <h5 class="modal-title">Angular + Bootstrap Modal #1</h5>
+            <button type="button" class="btn-close" (click)="modalService.close();"></button>
+        </div>
+        <div class="modal-body">
+            <p>This bootstrap modal was opened with Angular!</p>
+            <p>
+                <label class="form-label">Page text:</label>
+                <input type="text" class="form-control" [(ngModel)]="bodyText" />
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="modalService.close();">Close</button>
+        </div>
+    </modal>
+    
+    <modal id="modal-2">
+        <div class="modal-header">
+            <h5 class="modal-title">Angular + Bootstrap Modal #2</h5>
+            <button type="button" class="btn-close" (click)="modalService.close();"></button>
+        </div>
+        <div class="modal-body">
+            <p style="padding-bottom: 1500px;">This is a tall modal to demonstrate scrolling modal content.</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="modalService.close();">Close</button>
+        </div>
+    </modal>
+</div>
+
+<!-- credits -->
+<div class="text-center mt-4">
+    <p>
+        <a href="https://jasonwatmore.com/getting-the-bootstrap-5-modal-and-angular-15-to-play-nicely-together" target="_blank">Getting the Bootstrap 5 Modal and Angular 15 to play nicely together</a>
+    </p>
+    <p>
+        <a href="https://jasonwatmore.com" target="_blank">JasonWatmore.com</a>
+    </p>
+</div>
